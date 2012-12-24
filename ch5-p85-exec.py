@@ -14,6 +14,6 @@ print sqrt(4) #执行这里的时候会报错,因为sqrt=1 干扰了正常的命
 #使用字典来控制潜在的风险
 from math import sqrt
 scope = {}
-exec "sqrt = 1" in scope
+exec "sqrt = 1" in scope 
 print sqrt(4)
 print scope['sqrt']
