@@ -9,13 +9,14 @@ class Fibs:
      def __iter__(self):
           return self
 
-
+aa = []
 fibs = Fibs()
-for f in fibs:
-     if f > 1000:
-          print (f)
+for f in fibs:    
+     if f > 100000:
+          #print (f)          
           break
-     
+     aa=aa+[f]
+print (aa)
      
 
 class TestInterator:
