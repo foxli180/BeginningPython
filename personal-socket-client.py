@@ -1,7 +1,7 @@
 import socket
 
 s = socket.socket()
-_HOST = socket.gethostname()
+_HOST = '192.168.1.180'
 _PORT = 1234
 try:
     s.connect((_HOST,_PORT))
