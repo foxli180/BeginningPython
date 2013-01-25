@@ -1,21 +1,28 @@
 class Operation:
 
      def __init__(self):
-          __NumberA = 0.0
-          __NumberB = 0.0
-
+          self.__NumberA = 0.0
+          self.__NumberB = 0.0
+     '''
      def NumberA(self,value):
           def __get__(self):
                return self.__NumberA
           def __set__(self,value):
-               self._NumberA = value
+               self.__NumberA = value
+     #'''
 
+     def getNumberA(self):
+          return self.__NumberA
+     def setNumberA(self,value):
+          self.__NumberA = value
+
+     NumberA = property(getNumberA,setNumberA)
      
      def NumberB(self,value):
           def __get__(self):
                return self.__NumberB
           def __set__(self,value):
-               self._NumberB= value
+               self.__NumberB= value
 
      def getResult(self):
           result = 0.0
@@ -70,8 +77,10 @@ class OperationFactory:
 def test():
      #oper = Operation()
      oper = OperationFactory.CreateOperrator('*')
+     print (oper.NumberA)
      oper.NumberA = 20
      oper.NumberB = 30
+     print (oper.NumberA)
      print (oper.getResult())
 
 
