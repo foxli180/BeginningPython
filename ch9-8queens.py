@@ -14,4 +14,8 @@ def queens(num,state=[]):
                else:
                     for result in queens(num,state+[pos]):
                          yield result+[pos]
-                         
+ 
+if __name__ =='__main__':
+	print ("3 queens:", list(queens(3)))
+	print ("4 queens:", list(queens(4)))
+	print ("8 queens:", len(list(queens(8))))
